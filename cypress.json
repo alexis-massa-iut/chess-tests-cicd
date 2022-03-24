@@ -1,0 +1,8 @@
+{
+  "supportFile": "cypress/support/index.js",
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "video": false,
+  "reporter": "mochawesome",
+  "defaultCommandTimeout": 100
+}
