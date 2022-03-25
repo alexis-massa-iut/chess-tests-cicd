@@ -1,0 +1,48 @@
+stages:          # List of stages for jobs, and their order of execution
+  - linting
+  - doc
+  - light-testing
+  - heavy-testing
+  - release
+
+default: 
+    image: ${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/node:gallium-alpine3.15
+
+lint-job: 
+    stage: linting
+    script: 
+        - echo todo
+        - 'false'
+        
+doc-coverage-job: 
+    stage: doc
+    script: 
+        - echo todo
+        - 'false'
+        
+unit-test-job: 
+    stage: light-testing
+    script: 
+        - echo todo
+        - 'false'
+
+funct-testing: 
+    stage: heavy-testing
+    script: 
+        - echo todo
+        - 'false'
+        
+bundle-code-job: 
+    stage: release
+    script: 
+        - echo todo
+        - 'false'
+
+                
+bundle-doc-job: 
+    stage: release
+    script: 
+        - echo todo
+        - 'false'
+
+
