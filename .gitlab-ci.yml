@@ -10,9 +10,13 @@ default:
 
 lint-job: 
     stage: linting
-    script: 
-        - echo todo
-        - 'false'
+    before_script:
+        - echo 'Performing lint-job...'
+        - npm install eslint --save-dev
+    script:
+        - npm run lint
+    after_script:
+        - echo 'lint-job is done !'
         
 doc-coverage-job: 
     stage: doc
