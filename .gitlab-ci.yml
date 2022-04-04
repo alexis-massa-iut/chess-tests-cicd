@@ -57,8 +57,12 @@ bundle-code-job:
 
 bundle-doc-job:
     stage: release
+    before_script:
+        - echo 'generating jsDoc...'
+        - npm install jsdoc --save-dev
     script:
-        - echo todo
-        - 'false'
+        - npm run doc
+    after_script:
+        - echo 'doc-job is done !'
 
 
