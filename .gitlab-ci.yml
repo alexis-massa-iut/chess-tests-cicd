@@ -49,9 +49,10 @@ funct-testing:
 
 bundle-code-job:
     stage: release
+    before_script:
+        - npm install --frozen-lockfile
     script:
-        - echo todo
-        - 'false'
+        - npm run build
 
 
 bundle-doc-job:
