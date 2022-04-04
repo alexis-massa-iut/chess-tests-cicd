@@ -6,8 +6,10 @@
   "scripts": {
     "test": "mocha",
     "lint": "eslint src/",
-    "coverage": "nyc --temp-dir=./reports/.nyc-output mocha",
-    "report": "nyc report --reporter=html --temp-dir=./reports/.nyc-output --report-dir=./reports/coverage",
+    "coverage": "nyc npm run test",
+    "coverage-html": "nyc --reporter=html npm run test",
+    "report": "npx nyc mocha --reporter mocha-junit-reporter --reporter-options mochaFile=junit.xml",
+    "report-coverage": "npx nyc --reporter cobertura mocha",
     "kill-mutants": "stryker run",
     "build": "browserify index.js -o dist/chess.js -s 'chess'",
     "doc": "jsdoc src/ -d docs -t ./node_modules/toast-jsdoc/",
@@ -31,6 +33,7 @@
     "eslint-plugin-promise": "^5.2.0",
     "jsdoc": "^3.6.10",
     "mocha": "^9.2.1",
+    "mocha-junit-reporter": "^2.0.2",
     "nyc": "^15.1.0",
     "toast-jsdoc": "^1.0.2"
   }

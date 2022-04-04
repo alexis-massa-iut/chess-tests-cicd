@@ -5,10 +5,10 @@ stages:          # List of stages for jobs, and their order of execution
   - heavy-testing
   - release
 
-default: 
+default:
     image: ${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/node:gallium-alpine3.15
 
-lint-job: 
+lint-job:
     stage: linting
     before_script:
         - echo 'Performing lint-job...'
@@ -17,35 +17,46 @@ lint-job:
         - npm run lint
     after_script:
         - echo 'lint-job is done !'
-        
-doc-coverage-job: 
+
+doc-coverage-job:
     stage: doc
-    script: 
+    script:
         - echo todo
         - 'false'
-        
-unit-test-job: 
+
+unit-test-job:
+    image: ${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/node:gallium-alpine3.15
     stage: light-testing
-    script: 
-        - echo todo
-        - 'false'
+    before_script:
+        - npm install --frozen-lockfile
+    script:
+        - npm run coverage
+        - npm run report
+        - npm run report-coverage
+    coverage: /All files\s*\|\s*([\d\.]+)/
+    artifacts:
+        when: always
+        reports:
+            junit:
+                - junit.xml
+            cobertura: coverage/cobertura-coverage.xml
 
-funct-testing: 
+funct-testing:
     stage: heavy-testing
-    script: 
-        - echo todo
-        - 'false'
-        
-bundle-code-job: 
-    stage: release
-    script: 
+    script:
         - echo todo
         - 'false'
 
-                
-bundle-doc-job: 
+bundle-code-job:
     stage: release
-    script: 
+    script:
+        - echo todo
+        - 'false'
+
+
+bundle-doc-job:
+    stage: release
+    script:
         - echo todo
         - 'false'
 
