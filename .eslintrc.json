@@ -1,11 +1,12 @@
 {
-    "extends": ["airbnb-base", "prettier"],
-    "rules": {
-      "import/prefer-default-export": "off",
-      "class-methods-use-this": "off",
-      "linebreak-style": ["error", "unix"],
-      "quotes": ["error", "single", { "avoidEscape": true }],
-      "no-console": "error"
-    },
-    "plugins": ["prettier", "html"]
-  }
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "extends": ["airbnb-base"],
+  "plugins": ["html"]
+}
