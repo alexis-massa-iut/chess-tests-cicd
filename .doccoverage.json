@@ -1,0 +1,20 @@
+{
+    "source": "./src",
+    "excludedPaths": [
+        "/assets/",
+        "/components/",
+        "/containers/",
+        "/__test__/",
+        "/config./",
+        "__snapshots__"
+    ],
+    "excludedComponentPaths": [
+        "/__test__/"
+    ],
+    "foldersWithComponentFiles": [
+        "components",
+        "containers"
+    ],
+    "framework": "js",
+    "storiesFolderPath": "./stories"
+}

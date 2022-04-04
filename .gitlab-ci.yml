@@ -20,12 +20,14 @@ lint-job:
 
 doc-coverage-job:
     stage: doc
-    script:
-        - echo todo
-        - 'false'
-
-unit-test-job:
-    image: ${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/node:gallium-alpine3.15
+    script: 
+        - npm i doc-coverage # Install doc-coverage package
+        - mkdir -p stories # Create mandatory stories folder, we don't know why it's mandatory, and what it does, but it is.
+        - npm run doc-doverage # Run code coverage
+        - cat doc-coverage/docCoverageReport.json | jq '.jsdocCoverage.coveragePercent' # Get 'Pure JS files' doc coverage value (%age)
+    coverage: '/.*coveragePercentage.*\'(\d*\.?\d*)\%\'.*/'
+        
+unit-test-job: 
     stage: light-testing
     before_script:
         - npm install --frozen-lockfile

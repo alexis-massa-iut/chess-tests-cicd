@@ -1,0 +1,89 @@
+{
+    "jsdocCoverage": {
+        "expectedCount": 11,
+        "actualCount": 11,
+        "coveragePercent": 100
+    },
+    "ComponentFileCoverage": {
+        "totalComponents": 0,
+        "componentsWithStories": 0,
+        "componentsWithStoriesOrPropTypes": 0,
+        "storyBookCoveragePercent": 0,
+        "storyBookOrPropTypesCoveragePercent": 0,
+        "propTypesCoveragePercent": null
+    },
+    "totalCoverage": {
+        "jsDocWithFullyDoc": 100,
+        "jsDocWithStorybook": 100,
+        "jsDocWithPropTypesCoverage": 100
+    },
+    "fileWiseCoverageJSFiles": {
+        "C:\\LocalRepository\\chess\\src\\bishop.js": {
+            "funcCoverage": {
+                "Bishop": true
+            },
+            "fileCoverage": "100%"
+        },
+        "C:\\LocalRepository\\chess\\src\\chessboard.js": {
+            "funcCoverage": {
+                "Chessboard": true
+            },
+            "fileCoverage": "100%"
+        },
+        "C:\\LocalRepository\\chess\\src\\king.js": {
+            "funcCoverage": {
+                "King": true
+            },
+            "fileCoverage": "100%"
+        },
+        "C:\\LocalRepository\\chess\\src\\knight.js": {
+            "funcCoverage": {
+                "Knight": true
+            },
+            "fileCoverage": "100%"
+        },
+        "C:\\LocalRepository\\chess\\src\\notifications\\capture.js": {
+            "funcCoverage": {
+                "CaptureNotification": true
+            },
+            "fileCoverage": "100%"
+        },
+        "C:\\LocalRepository\\chess\\src\\notifications\\move.js": {
+            "funcCoverage": {
+                "MoveNotification": true
+            },
+            "fileCoverage": "100%"
+        },
+        "C:\\LocalRepository\\chess\\src\\notifications\\notification.js": {
+            "funcCoverage": {
+                "Notification": true
+            },
+            "fileCoverage": "100%"
+        },
+        "C:\\LocalRepository\\chess\\src\\pawn.js": {
+            "funcCoverage": {
+                "Pawn": true
+            },
+            "fileCoverage": "100%"
+        },
+        "C:\\LocalRepository\\chess\\src\\piece.js": {
+            "funcCoverage": {
+                "Piece": true
+            },
+            "fileCoverage": "100%"
+        },
+        "C:\\LocalRepository\\chess\\src\\queen.js": {
+            "funcCoverage": {
+                "Queen": true
+            },
+            "fileCoverage": "100%"
+        },
+        "C:\\LocalRepository\\chess\\src\\rook.js": {
+            "funcCoverage": {
+                "Rook": true
+            },
+            "fileCoverage": "100%"
+        }
+    },
+    "fileWiseCoverageJs": {}
+}
