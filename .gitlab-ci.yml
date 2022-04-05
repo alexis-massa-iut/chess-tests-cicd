@@ -20,11 +20,11 @@ lint-job:
 
 doc-coverage-job:
     stage: doc
-    script: 
+    before-script: 
         - npm i doc-coverage # Install doc-coverage package
         - mkdir -p stories # Create mandatory stories folder, we don't know why it's mandatory, and what it does, but it is.
+    script: 
         - npm run doc-doverage # Run code coverage
-        - cat doc-coverage/docCoverageReport.json | jq '.jsdocCoverage.coveragePercent' # Get 'Pure JS files' doc coverage value (%age)
     coverage: /.*coveragePercentage.*\'(\d*\.?\d*)\%\'.*/
         
 unit-test-job: 
