@@ -24,7 +24,7 @@ doc-coverage-job:
         - npm i doc-coverage # Install doc-coverage package
         - mkdir -p stories # Create mandatory stories folder, we don't know why it's mandatory, and what it does, but it is.
     script: 
-        - npm run doc-doverage # Run code coverage
+        - npm run doc-coverage # Run code coverage
     coverage: /.*coveragePercentage.*\'(\d*\.?\d*)\%\'.*/
         
 unit-test-job: 
