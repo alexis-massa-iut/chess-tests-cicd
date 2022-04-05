@@ -24,7 +24,7 @@ Rook.prototype.constructor = Rook;
 Rook.prototype.canMove = function (rank, file) {
   const delta = {
     rank: Math.abs(this.rank - rank),
-    file: Math.abs(this.file - file)
+    file: Math.abs(this.file - file),
   };
 
   // Moving horizontally or vertically

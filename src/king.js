@@ -24,7 +24,7 @@ King.prototype.constructor = King;
 King.prototype.canMove = function (rank, file) {
   const delta = {
     rank: Math.abs(this.rank - rank),
-    file: Math.abs(this.file - file)
+    file: Math.abs(this.file - file),
   };
 
   if (delta.rank > 1 || delta.file > 1) return false;

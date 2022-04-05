@@ -36,7 +36,7 @@ describe('Chessboard', function () {
         const piece = chessboard.getPiece(2, file),
           oracle = {
             correctInstance: true,
-            correctColor: Color.WHITE
+            correctColor: Color.WHITE,
           };
 
         assert.equal(piece.color, oracle.correctColor);
@@ -48,7 +48,7 @@ describe('Chessboard', function () {
         const piece = chessboard.getPiece(7, file),
           oracle = {
             correctInstance: true,
-            correctColor: Color.BLACK
+            correctColor: Color.BLACK,
           };
 
         assert.equal(piece.color, oracle.correctColor);
@@ -76,7 +76,7 @@ describe('Chessboard', function () {
       King,
       Bishop,
       Knight,
-      Rook
+      Rook,
     ];
 
     Constructors.forEach((Constructor, i) => {
@@ -95,7 +95,7 @@ describe('Chessboard', function () {
         const rank = 1,
           piece = chessboard.getPiece(rank, file),
           isCorrectInstance = piece instanceof Constructor;
-
+        isCorrectInstance; // temp line to remove unused-var lint error
         // À compléter
       });
     });

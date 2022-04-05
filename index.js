@@ -21,13 +21,13 @@ const Chess = {
     Queen: Queen,
     Bishop: Bishop,
     Rook: Rook,
-    Knight: Knight
+    Knight: Knight,
   },
   notifications: {
     Notification: Notification,
     MoveNotification: MoveNotification,
-    CaptureNotification: CaptureNotification
-  }
+    CaptureNotification: CaptureNotification,
+  },
 };
 
 module.exports = Chess;

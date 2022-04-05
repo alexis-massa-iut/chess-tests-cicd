@@ -36,7 +36,7 @@ Chessboard.prototype.init = function () {
     Bishop: Bishop,
     Rook: Rook,
     Knight: Knight,
-    Pawn: Pawn
+    Pawn: Pawn,
   };
 
   // Each piece has a uniq numerical id.
@@ -50,7 +50,7 @@ Chessboard.prototype.init = function () {
       file: i,
       id: ++id,
       chessboard: this,
-      color: Color.BLACK
+      color: Color.BLACK,
     });
 
     this.pieces.push(blackPawn);
@@ -61,7 +61,7 @@ Chessboard.prototype.init = function () {
       file: i,
       id: ++id,
       chessboard: this,
-      color: Color.WHITE
+      color: Color.WHITE,
     });
 
     this.pieces.push(whitePawn);
@@ -70,7 +70,7 @@ Chessboard.prototype.init = function () {
   // Put the other pieces
   [
     { rank: 1, color: Color.WHITE },
-    { rank: 8, color: Color.BLACK }
+    { rank: 8, color: Color.BLACK },
   ].forEach((data) => {
     const { rank, color } = data;
 
@@ -82,7 +82,7 @@ Chessboard.prototype.init = function () {
       'King',
       'Bishop',
       'Knight',
-      'Rook'
+      'Rook',
     ].forEach((Piece, file) => {
       this.pieces.push(
         new chessPackage[Piece]({
@@ -90,7 +90,7 @@ Chessboard.prototype.init = function () {
           rank: rank,
           id: ++id,
           file: file + 1,
-          color: color
+          color: color,
         })
       );
     });

@@ -20,13 +20,30 @@ describe('Game', function () {
     chessboard = new Chessboard();
     chessboard.init();
   });
-
   describe('#move and #capture', function () {
     game.forEach((action) => {
       if (action.type === 'move') {
-        // À compléter
+        // Définition de constantes pour simplifier l'écriture de l'intitulé du cas de tests
+        // La fonction convertFileToString est définie dans test/game.js
+        const posInit =
+            convertFileToString(action.from.file) + action.from.rank,
+          posFinal = convertFileToString(action.to.file) + action.to.rank;
+        it(`Vérifier le déplacement de la pièce de (${posInit}) à (${posFinal})`, function () {
+          const piece = chessboard.getPiece(action.from.rank, action.from.file);
+          assert.equal(piece.color, action.color);
+          assert.equal(piece.canMove(action.to.rank, action.to.file), true);
+          // La ligne suivante est primordiale pour le bon fonctionnement de ces cas de test.
+          piece.move(action.to.rank, action.to.file);
+          assert.equal(piece.rank, action.to.rank);
+          assert.equal(piece.file, action.to.file);
+        });
       } else {
-        // À compléter
+        // Définition d'une constante pour simplifier l'écriture de l'intitulé du cas de tests
+        const pos = convertFileToString(action.at.file) + action.at.rank;
+        it(`Vérifier la capture de la pièce ${action.color} à (${pos})`, function () {
+          const piece = chessboard.getPiece(action.at.rank, action.at.file);
+          assert.notEqual(piece.color, action.color);
+        });
       }
     });
   });

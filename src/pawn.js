@@ -41,7 +41,7 @@ Pawn.prototype.canMove = function (rank, file) {
 
   const delta = {
     rank: Math.abs(this.rank - rank),
-    file: Math.abs(this.file - file)
+    file: Math.abs(this.file - file),
   };
 
   const isGoingUp = rank - this.rank > 0;

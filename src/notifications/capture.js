@@ -14,7 +14,7 @@ const CaptureNotification = function (options) {
    */
   this.pos = options.pos || {
     rank: 1,
-    file: 1
+    file: 1,
   };
 };
 

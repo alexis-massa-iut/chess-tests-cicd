@@ -89,8 +89,8 @@ Piece.prototype.move = function (rank, file) {
         new CaptureNotification({
           pos: {
             rank: rank,
-            file: file
-          }
+            file: file,
+          },
         })
       );
     }
@@ -98,13 +98,13 @@ Piece.prototype.move = function (rank, file) {
     // Store the previous position of the piece to move
     const oldPosition = {
       rank: this.rank,
-      file: this.file
+      file: this.file,
     };
 
     // Store the new position of the piece to move
     const newPosition = {
       rank: rank,
-      file: file
+      file: file,
     };
 
     // Actually move the piece
@@ -115,7 +115,7 @@ Piece.prototype.move = function (rank, file) {
     this.update(
       new MoveNotification({
         oldPosition: oldPosition,
-        newPosition: newPosition
+        newPosition: newPosition,
       })
     );
   }
@@ -203,7 +203,7 @@ Piece.prototype.canMove = function (rank, file) {
   // Difference between the current and target locations
   const delta = {
     rank: rank - this.rank,
-    file: file - this.file
+    file: file - this.file,
   };
 
   // Compute the direction of the movement :
@@ -211,13 +211,13 @@ Piece.prototype.canMove = function (rank, file) {
   // -1 to rank (resp. file) means going down (resp. left)
   const direction = {
     rank: delta.rank === 0 ? 0 : delta.rank / Math.abs(delta.rank),
-    file: delta.file === 0 ? 0 : delta.file / Math.abs(delta.file)
+    file: delta.file === 0 ? 0 : delta.file / Math.abs(delta.file),
   };
 
   // Micro-step of the movement following the direction
   const p = {
     rank: this.rank + direction.rank,
-    file: this.file + direction.file
+    file: this.file + direction.file,
   };
 
   // If we cannot land nor capture a piece, we cannot move

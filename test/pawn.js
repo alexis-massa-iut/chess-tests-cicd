@@ -13,7 +13,7 @@ describe('White pawn', function () {
         chessboard: chessboard,
         color: Color.WHITE,
         rank: 2,
-        file: 3
+        file: 3,
       });
       chessboard.pieces.push(pawn);
     });
@@ -42,7 +42,7 @@ describe('White pawn', function () {
         chessboard: chessboard,
         color: Color.BLACK,
         rank: 3,
-        file: 4
+        file: 4,
       });
       chessboard.pieces.push(blackPawn);
 
@@ -76,7 +76,7 @@ describe('White pawn', function () {
         chessboard: chessboard,
         color: Color.WHITE,
         rank: 2,
-        file: 3
+        file: 3,
       });
 
       chessboard.pieces.push(pawn);
@@ -131,7 +131,7 @@ describe('White pawn', function () {
         chessboard: chessboard,
         color: Color.WHITE,
         rank: 3,
-        file: 3
+        file: 3,
       });
     });
 
@@ -154,7 +154,7 @@ describe('Black pawn', function () {
         chessboard: chessboard,
         color: Color.BLACK,
         rank: 7,
-        file: 3
+        file: 3,
       });
     });
 

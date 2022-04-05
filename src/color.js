@@ -4,7 +4,7 @@
  */
 const Color = {
   WHITE: 'white',
-  BLACK: 'black'
+  BLACK: 'black',
 };
 
 module.exports = Color;

@@ -14,7 +14,7 @@ const MoveNotification = function (options) {
    */
   this.oldPosition = options.oldPosition || {
     rank: 1,
-    file: 1
+    file: 1,
   };
 
   /**
@@ -23,7 +23,7 @@ const MoveNotification = function (options) {
    */
   this.newPosition = options.newPosition || {
     rank: 1,
-    file: 1
+    file: 1,
   };
 };
 
