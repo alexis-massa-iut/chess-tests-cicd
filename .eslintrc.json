@@ -4,9 +4,17 @@
     "commonjs": true,
     "es2021": true
   },
+  "extends": ["eslint:recommended"],
   "parserOptions": {
     "ecmaVersion": "latest"
   },
-  "extends": ["airbnb-base"],
-  "plugins": ["html"]
+  "rules": {
+    "eqeqeq": ["error", "smart"],
+    "semi": ["error", "always"],
+    "prefer-const": "error",
+    "no-var": "error",
+    "indent": ["error", "tab"],
+    "linebreak-style": ["error", "unix"],
+		"quotes": ["error", "single", { "avoidEscape": true }]
+  }
 }
