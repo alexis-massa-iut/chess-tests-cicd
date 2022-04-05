@@ -52,10 +52,13 @@ funct-testing:
 bundle-code-job:
     stage: release
     before_script:
+        - echo 'install dependencies...'
         - npm install --frozen-lockfile
     script:
+        - echo 'run build...'
         - npm run build
-
+    after_script:
+        - echo 'bundle-code-job is done !'
 
 bundle-doc-job:
     stage: release
