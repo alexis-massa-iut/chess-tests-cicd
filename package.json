@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "lint": "eslint src/**/*.js test/*.js index.js",
-    "apply-lint": "eslint src/**/*.js test/*.js index.js --fix",
-    "prettier": "prettier --end-of-line lf --write src/**/*.js && prettier --end-of-line lf --write test/*.js && prettier --end-of-line lf --write index.js",
+    "lint": "eslint src/**/*.js test/**/*.js web/**/*.js index.js",
+    "apply-lint": "eslint src/**/*.js test/**/*.js web/**/*.js index.js --fix",
+    "prettier": "prettier --end-of-line lf --write src/**/*.js test/**/*.js web/**/*.js index.js",
     "coverage": "nyc npm run test",
     "coverage-html": "nyc --reporter=html npm run test",
     "report": "npx nyc mocha --reporter mocha-junit-reporter --reporter-options mochaFile=junit.xml",
