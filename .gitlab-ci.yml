@@ -21,7 +21,7 @@ lint-job:
 doc-coverage-job:
     stage: doc
     before_script: 
-        - npm i --frozen-lockfile # Install frozen lockfile
+        - npm i doc-coverage # Install doc-coverage package
         - mkdir -p stories # Create mandatory stories folder, we don't know why it's mandatory, and what it does, but it is.
     script: 
         - npm run doc-coverage # Run code coverage
@@ -29,7 +29,6 @@ doc-coverage-job:
         
 unit-test-job: 
     stage: light-testing
-    needs: [lint-job]
     before_script:
         - npm install --frozen-lockfile
     script:
@@ -64,6 +63,7 @@ bundle-code-job:
 
 bundle-doc-job:
     stage: release
+    needs: ["doc-coverage-job"]
     before_script:
         - echo 'generating jsDoc...'
         - npm install jsdoc --save-dev
@@ -71,5 +71,9 @@ bundle-doc-job:
         - npm run doc
     after_script:
         - echo 'doc-job is done !'
+    artifacts:
+        when: always
+        paths:
+            - docs/
 
 
