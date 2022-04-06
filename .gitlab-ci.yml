@@ -45,6 +45,7 @@ unit-test-job:
 
 funct-testing:
     stage: heavy-testing
+    allow_failure: true  # to remove once fully implemented
     script:
         - echo todo
         - 'false'
