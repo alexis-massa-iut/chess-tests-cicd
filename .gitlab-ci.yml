@@ -21,7 +21,7 @@ lint-job:
 doc-coverage-job:
     stage: doc
     before_script: 
-        - npm i doc-coverage # Install doc-coverage package
+        - npm i --frozen-lockfile # Install frozen lockfile
         - mkdir -p stories # Create mandatory stories folder, we don't know why it's mandatory, and what it does, but it is.
     script: 
         - npm run doc-coverage # Run code coverage
