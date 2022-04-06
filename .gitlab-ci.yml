@@ -29,6 +29,7 @@ doc-coverage-job:
         
 unit-test-job: 
     stage: light-testing
+    needs: [lint-job]
     before_script:
         - npm install --frozen-lockfile
     script:
